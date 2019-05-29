@@ -1,41 +1,35 @@
 ﻿@model korean.Models.korece
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <p>&nbsp;</p>
-<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#1f2977">Kelime Kartı Oluştur</font></h1>
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#1f2977">Düzenle</font></h1>
 <div class="contact py-5" id="contact">
 
     <div class="container pb-xl-5 pb-lg-3">
 
         <div class="row">
             <div class="col-md-4">
-                <form asp-action="Create" class="contact-wthree-do">
+                <form asp-action="Edit" class="contact-wthree-do">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
                     <div class="form-group">
-                        <label asp-for="kelime" class="control-label">KELİME</label>
+                        <label asp-for="kelime" class="control-label"></label>
                         <input asp-for="kelime" class="form-control" />
                         <span asp-validation-for="kelime" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="anlam" class="control-label">ANLAMI</label>
+                        <label asp-for="anlam" class="control-label"></label>
                         <input asp-for="anlam" class="form-control" />
                         <span asp-validation-for="anlam" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Kaydet" class="btn button-style mt-md-5 mt-4" />
+                        <input type="submit" value="Kaydet" class="btn btn-primary" />
                     </div>
                 </form>
             </div>
         </div>
-        <div>
-            <a asp-action="Index" class="btn btn-outline-secondary">Kelime Listene Git</a>
         </div>
-    </div>
 </div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

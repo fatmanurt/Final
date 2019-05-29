@@ -74,7 +74,11 @@
                 <p> &nbsp&nbsp</p>
                 저는 일본 사람입니다.(Ben Japonyalıyım.)
                 <p> &nbsp&nbsp</p>
+           
 
+                <div>
+                    <a asp-controller="Korean" asp-action="kelimea" class="btn btn-outline-success">Kelime kartlarına git</a>
+                </div>
 
 
 
@@ -99,6 +103,7 @@
                                 <h3>Dersimiz Hakkındaki düşüncelerini Yaz </h3>
                                 <form asp-action="Create" class="contact-wthree-do">
                                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <p>&nbsp;</p>
                                     <div class="form-group">
                                         <label asp-for="UserFullName">Kullanıcı Adı</label>
                                         <input asp-for="UserFullName" class="form-control" placeholder="Kullanıcı Adı" />
@@ -117,13 +122,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="submit" value="Yorum Yap" class="btn btn-primary" />
+                                        <input type="submit" value="Yorum Yap" class="btn button-style mt-md-5 mt-4" />
                                     </div>
                                 </form>
                             </div>
                         </div>
                         <div>
-                            <a asp-action="Index" class="btn btn-outline-success">Tüm Yorumları Oku</a>
+                            <a asp-action="Index" class="btn btn-outline-secondary">Tüm Yorumları Oku</a>
                         </div>
                     </div>
                 </div>

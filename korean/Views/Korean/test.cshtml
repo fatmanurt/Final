@@ -1,0 +1,228 @@
+﻿@using Microsoft.AspNetCore.Identity
+@{
+    ViewData["Title"] = "test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<p>&nbsp;</p>
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#1f2977">Quiz Soruları</font></h1>
+
+<a class="nav-link text-dark" title="Manage" align="left"><font color="#ff9f2b">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BAŞARILAR </font>  @User.Identity.Name!</a>
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm">
+            <p>
+                &nbsp;
+            </p>
+            <p>1) Cümleleri uygun kelimelerle tamamlayın.</p>
+            <p>
+                &nbsp;
+            </p>
+            <form class="contact-wthree-do">
+                *  저는
+                <input class="form-control" />
+                사람입니다.
+            </form>
+        </div>
+        <div class="col-sm">
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <form class="contact-wthree-do">
+                *  그 사람은
+                <input class="form-control" />
+                입니다.
+            </form>
+        </div>
+        <div class="col-sm">
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <form class="contact-wthree-do">
+
+                * 나는
+                <input class="form-control" />
+                이다.
+            </form>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm">
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            
+            <p>
+                2) Kelimelerden farklı olanı seçin.
+            </p>
+            <p>
+                *
+            </p>
+            <form class="contact-wthree-do">
+                <label class="checkbox-inline"><input type="checkbox" value=""> &nbsp; &nbsp;일본 </label>
+                <label class="checkbox-inline"><input type="checkbox" value=""> &nbsp; &nbsp;독일</label>
+                <label class="checkbox-inline"><input type="checkbox" value=""> &nbsp; &nbsp;프랑스</label>
+                <label class="checkbox-inline"><input type="checkbox" value=""> &nbsp; &nbsp; 터키어</label>
+                <label class="checkbox-inline"><input type="checkbox" value=""> &nbsp; &nbsp;한국</label>
+            </form>
+        </div>
+        <div class="col-sm">
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+           
+            <p>
+                *
+            </p>
+            <form class="contact-wthree-do">
+                <label class="checkbox-inline"><input type="checkbox" value="">  &nbsp;이 </label>
+                <label class="checkbox-inline"><input type="checkbox" value="">  &nbsp;그</label>
+                <label class="checkbox-inline"><input type="checkbox" value=""> &nbsp; 저 </label>
+                <label class="checkbox-inline"><input type="checkbox" value=""> &nbsp; 자</label>
+                <label class="checkbox-inline"><input type="checkbox" value=""> &nbsp; 것</label>
+            </form>
+        </div>
+        <div class="col-sm">
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+          
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                *
+            </p>
+            <form class="contact-wthree-do">
+                <label class="checkbox-inline"><input type="checkbox" value="">일본 </label>
+                <label class="checkbox-inline"><input type="checkbox" value="">독일</label>
+                <label class="checkbox-inline"><input type="checkbox" value="">프랑스</label>
+                <label class="checkbox-inline"><input type="checkbox" value=""> 터키어</label>
+                <label class="checkbox-inline"><input type="checkbox" value="">한국</label>
+            </form>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-sm">
+            <p>
+                &nbsp;
+            </p>
+            <p>3) Yanlış yazılan kelimeyi seçin.</p>
+            <p>
+                &nbsp;
+            </p>
+            <div class="checkbox">
+                <p><b>1) 의자</b></p>
+            </div>
+            <div class="checkbox">
+                <p><b>2) 사람</b></p>
+            </div>
+            <div class="checkbox disabled">
+                <p><b>3) 고마요</b></p>
+            </div>
+
+
+
+
+        </div>
+        <div class="col-sm">
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <div>
+                <p><b>4) 선생님</b></p>  
+            </div>
+            <div class="checkbox">
+                <p><b>5) 학생</b></p>
+            </div>
+         
+
+        </div>
+        <div class="col-sm">
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <div class="form-group">
+
+                <select class="form-control" id="sel1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

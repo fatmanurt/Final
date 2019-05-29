@@ -39,7 +39,11 @@ namespace korean.Controllers
         {
             return View();
         }
-       
+        [AllowAnonymous]
+        public IActionResult test()
+        {
+            return View();
+        }
         // GET: Categories/Create
         public IActionResult Create()
         {

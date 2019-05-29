@@ -10,7 +10,7 @@
             {
             <li class="nav-item">
                 <img src="~/images/login_icon.png" height="70" width="90" align="left"  />
-                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage" align="right"><font color="#ff9f2b" >HOSGELDIN </font>  @User.Identity.Name!</a>
+                <a class="nav-link text-dark"  title="Manage" align="right"><font color="#ff9f2b" >HOSGELDIN </font>  @User.Identity.Name!</a>
             </li>
                 <li class="nav-item">
                     <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
@@ -21,11 +21,13 @@
             else
             {
                 <li class="nav-item" >
-                    <a class="btn btn-outline-info" asp-area="Identity" asp-page="/Account/Register">>KAYIT OL&nbsp;</a>
+                    <a class="btn btn-outline-info btn-sm" asp-area="Identity" asp-page="/Account/Register">>KAYIT OL &nbsp;</a>
                 </li>
-               
+
+             
+
                 <li class="nav-item">
-                    <a class="btn btn-outline-secondary" asp-area="Identity" asp-page="/Account/Login">>GIRIS YAP</a>
+                    <a class="btn btn-outline-secondary btn-sm" asp-area="Identity" asp-page="/Account/Login">>GIRIS YAP</a>
                 </li>
             }
         </ul>
