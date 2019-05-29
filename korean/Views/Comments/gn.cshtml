@@ -1,0 +1,141 @@
+﻿@model korean.Models.comment
+@{
+    ViewData["Title"] = "gn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="contact py-5" id="contact">
+    <div class="container pb-xl-5 pb-lg-3">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 align="middle"> <font color="#14d1ab">Günlük Konuşma Cümleleri</font> </h1>
+                
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="~/images/gn.png" width="500" height="400" align="middle" />
+                <p>&nbsp</p>
+                <p>&nbsp</p>
+                <p>&nbsp</p>
+                <p>&nbsp</p>
+                <p>&nbsp</p>
+                <p>&nbsp</p>
+                <p>&nbsp</p>
+
+               
+            </div>
+            <div class="col-lg-6">
+                <p> &nbsp </p>
+                <p> &nbsp </p>
+                <p> &nbsp </p>
+                <b>  따라 오세요 (ddara oseyo)</b> 
+                <p> &nbsp&nbsp</p>
+                Peşimden gelin. (Beni takip edin)
+                <p> &nbsp&nbsp</p>
+
+                <b>그거 좋은 생각인데요 (kıgo çohın sengkagindeyo)</b> 
+                <p> &nbsp&nbsp</p>
+                Bu güzel bir fikir.
+                <p> &nbsp&nbsp</p>
+
+                <b>못 먹어요 (mot mogoyo)</b>
+                <p> &nbsp&nbsp</p>
+                (Bunu) yiyemem.
+                <p> &nbsp&nbsp</p>
+
+                <b>배불러요 (pebulloyo)</b> 
+                <p> &nbsp&nbsp</p>
+                Karnım tok.
+                <p> &nbsp&nbsp</p>
+
+                <b>그게 사실이에요? (kıge saşirieyo)</b>
+
+                <p> &nbsp&nbsp</p>
+                Bu doğru mu?
+                <p> &nbsp&nbsp</p>
+
+                <b>약속 좀 지켜 (yaksok çom çikyo)</b>
+                <p> &nbsp&nbsp</p>
+                Sözünü tut.
+                <p> &nbsp&nbsp</p>
+
+                <b>혼자 할 수 있어 (honca hal su isso)</b>
+                <p> &nbsp&nbsp</p>
+                Kendim yapabilirim.
+                <p> &nbsp&nbsp</p>
+
+                <b>걱정하지 마 (kokconghaci ma)</b>
+                <p> &nbsp&nbsp</p>
+                Endişelenme.
+                <p> &nbsp&nbsp</p>
+
+
+                <b>믿을 수 없어 (midıl su obso)</b>
+                <p> &nbsp&nbsp</p>
+                İnanamıyorum.
+                <p> &nbsp&nbsp</p>
+
+                <b>배고파 (pegopa)</b> 
+                <p> &nbsp&nbsp</p>
+                Karnım aç.
+
+
+                
+
+
+                
+            </div>
+            <div class="col-lg-12 mt-lg-0 mt-5">
+                <!-- contact form grid -->
+
+                <div class="contact-top1">
+
+                    <div>
+
+
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p> &nbsp&nbsp</p>
+                                <p> &nbsp&nbsp</p>
+                                <p> &nbsp&nbsp</p>
+                                <p> &nbsp&nbsp</p>
+                                <h3>Dersimiz Hakkındaki düşüncelerini Yaz </h3>
+                                <form asp-action="Create" class="contact-wthree-do">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="form-group">
+                                        <label asp-for="UserFullName">Kullanıcı Adı</label>
+                                        <input asp-for="UserFullName" class="form-control" placeholder="Kullanıcı Adı" />
+                                        <span asp-validation-for="UserFullName" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Content">Yorum</label>
+                                        <input asp-for="Content" class="form-control" placeholder="Yorum yaz.." />
+                                        <span asp-validation-for="Content" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label asp-for="CreatedDate">Tarih/Saat</label>
+                                        <input asp-for="CreatedDate" class="form-control" />
+                                        <span asp-validation-for="CreatedDate" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="submit" value="Yorum Yap" class="btn btn-primary" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div>
+                            <a asp-action="Index" class="btn btn-outline-success">Tüm Yorumları Oku</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //contact form grid ends here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

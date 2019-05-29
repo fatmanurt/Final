@@ -1,0 +1,63 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Üyelik Oluştur";
+   
+}
+
+
+
+<div class="row">
+    <div class="col-md-1">
+       
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+        <section>
+
+            <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                <p> &nbsp; </p>
+                <h2>@ViewData["Title"]</h2>
+                <hr />
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="Input.FirstName">Ad</label>
+                    <input asp-for="Input.FirstName" class="form-control" placeholder="Ad" />
+                    <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.LastName">Soyad</label>
+                    <input asp-for="Input.LastName" class="form-control" placeholder="Soyad" />
+                    <span asp-validation-for="Input.LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.BirthDate"> Doğum Tarihi</label>
+                    <input asp-for="Input.BirthDate" class="form-control" />
+                    <span asp-validation-for="Input.BirthDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Input.Email">Mail</label>
+                    <input asp-for="Input.Email" class="form-control" placeholder="email" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.Password">Şifre</label>
+                    <input asp-for="Input.Password" class="form-control" placeholder="Sifre" />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.ConfirmPassword">Şifre Tekrar</label>
+                    <input asp-for="Input.ConfirmPassword" class="form-control" placeholder="Sifre tekrar" />
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Üye Ol</button>
+                <p> &nbsp; </p>
+            </form>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

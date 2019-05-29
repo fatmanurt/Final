@@ -1,0 +1,51 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Üye Girişi";
+  
+}
+
+
+<div class="row">
+    <div class="col-md-1">
+        <section>
+          
+        </section>
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+        <section>
+           
+            <form id="account" method="post">
+                <p> &nbsp; </p>
+                 <h2>@ViewData["Title"]</h2>
+                <hr />
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                   
+                    <input asp-for="Input.Email" class="form-control" placeholder="Email"/>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                   
+                    <input asp-for="Input.Password" class="form-control" placeholder="Sifre"/>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                </div>
+                <div class="form-group">
+                   
+                    <p>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="btn btn-outline-success">Yeni üyelik oluştur</a>
+                    </p>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

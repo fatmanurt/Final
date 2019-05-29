@@ -1,0 +1,142 @@
+﻿@model korean.Models.comment
+@{
+    ViewData["Title"] = "language";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="contact py-5" id="contact">
+    <div class="container pb-xl-5 pb-lg-3">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 align="middle"> <font color="#14d1ab">Kore Alfabesi- Hangeul</font> </h1>
+                <p>&nbsp</p>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="~/images/kr.png" width="230" height="130" align="middle" />
+                <p>&nbsp</p>
+
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="~/images/tr.png" width="200" height="130" align="middle" />
+                <p>&nbsp</p>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="~/images/cn.png" width="200" height="130" align="middle" />
+                <p>&nbsp</p>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="~/images/de.png" width="200" height="130" align="middle" />
+                <p>&nbsp</p>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="~/images/fr.jpg" width="200" height="130" align="middle" />
+                <p>&nbsp</p>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="~/images/jp.jpg" width="200" height="130" align="middle" />
+            </div>
+            <div class="col-lg-6">
+                <p> &nbsp </p>
+                <p> &nbsp </p>
+                <p> &nbsp </p>
+                <b>  Kore =한국</b>
+                <p> &nbsp&nbsp</p>
+                Korece -한국어
+                <p> &nbsp&nbsp</p>
+                저는 한국 사람입니다.(Ben Koreliyim.)
+                <p> &nbsp&nbsp</p>
+
+                <b>Türkiye = 터키</b>
+                <p> &nbsp&nbsp</p>
+                Türkçe = 터키어
+                <p> &nbsp&nbsp</p>
+                저는 터키 사람입니다.(Ben Türkiyeliyim.)
+                <p> &nbsp&nbsp</p>
+
+
+
+                <b>Çin = 중국</b>
+                <p> &nbsp&nbsp</p>
+                Çince = 중국어
+                <p> &nbsp&nbsp</p>
+                저는 중국 사람입니다.(Ben Çinliyim.)
+                <p> &nbsp&nbsp</p>
+
+                <b>Almanya =독일</b>
+                <p> &nbsp&nbsp</p>
+
+                Almanca = 독일어
+                <p> &nbsp&nbsp</p>
+                저는 독일 사람입니다.(Ben Almanyalıyım.)
+                <p> &nbsp&nbsp</p>
+
+
+
+                <b>Fransa = 프랑스</b>
+                <p> &nbsp&nbsp</p>
+                Fransızca = 프랑스어
+                <p> &nbsp&nbsp</p>
+                저는 프랑스 사람입니다.(Ben Fransalıyım.)
+                <p> &nbsp&nbsp</p>
+
+                <b>Japonya = 일본</b>
+                <p> &nbsp&nbsp</p>
+                Japonca = 일본어
+                <p> &nbsp&nbsp</p>
+                저는 일본 사람입니다.(Ben Japonyalıyım.)
+                <p> &nbsp&nbsp</p>
+
+
+
+
+
+
+            </div>
+            <div class="col-lg-12 mt-lg-0 mt-5">
+                <!-- contact form grid -->
+
+                <div class="contact-top1">
+
+                    <div>
+
+
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p> &nbsp&nbsp</p>
+                                <p> &nbsp&nbsp</p>
+                                <p> &nbsp&nbsp</p>
+                                <p> &nbsp&nbsp</p>
+                                <h3>Dersimiz Hakkındaki düşüncelerini Yaz </h3>
+                                <form asp-action="Create" class="contact-wthree-do">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="form-group">
+                                        <label asp-for="UserFullName">Kullanıcı Adı</label>
+                                        <input asp-for="UserFullName" class="form-control" placeholder="Kullanıcı Adı" />
+                                        <span asp-validation-for="UserFullName" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Content">Yorum</label>
+                                        <input asp-for="Content" class="form-control" placeholder="Yorum yaz.." />
+                                        <span asp-validation-for="Content" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label asp-for="CreatedDate">Tarih/Saat</label>
+                                        <input asp-for="CreatedDate" class="form-control" />
+                                        <span asp-validation-for="CreatedDate" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="submit" value="Yorum Yap" class="btn btn-primary" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div>
+                            <a asp-action="Index" class="btn btn-outline-success">Tüm Yorumları Oku</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //contact form grid ends here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+
+

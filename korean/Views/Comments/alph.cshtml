@@ -1,0 +1,118 @@
+﻿@model korean.Models.comment
+@{
+    ViewData["Title"] = "alph";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="contact py-5" id="contact">
+    <div class="container pb-xl-5 pb-lg-3">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 align="middle"> <font color="#14d1ab" >Kore Alfabesi- Hangeul</font> </h1>
+                <p>&nbsp</p>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="~/images/h.jpg" width="250" height="250" align="middle" />
+                <p>&nbsp</p>
+                <p>&nbsp</p>
+                <p>&nbsp</p>
+                <p>&nbsp</p>
+                <p>&nbsp</p>
+                <p>&nbsp</p>
+                <p>&nbsp</p>
+               
+                &nbsp&nbsp<img src="~/images/alfabex.jpg"  align="left" />
+            </div>
+            <div class="col-lg-6">
+                <p> &nbsp </p>
+                <p> &nbsp </p>
+                <p>
+                    "Hangıl'ın ilham kaynağı üç temel noktadır. Birincisi insanı temsil eden dikey çizgiler 'ㅣ', ikincisi dünyayı temsil eden yatay çizgiler 'ㅡ', üçüncüsü ise cenneti temsil eden yuvarlak çizgiler, noktalardır 'ㅇ'".
+
+
+                </p>
+               
+                <p>
+                    <b> Kore Alfabesindeki 10 Ünlü Harf</b>
+                </p>
+
+                <p>  ㅏ /a/, ㅓ /ıo/, ㅗ /o/, ㅜ /u/, ㅡ  /ı/, ㅣ /i/ ㅑ /ya/, ㅕ /yıo/, ㅛ /yo/, ㅠ /yu/</p>
+                <p> &nbsp </p>
+                <p>Tek başlarına yazıldıklarında: 아, 어, 오, 우, 으, 이, 야, 여, 요, 유   </p>
+                <p> &nbsp </p>
+                <p> <b>Kore Alfabesindeki 14 Ünsüz Harf</b></p>
+
+                <p>ㄱ /g,k/, ㄴ /n/, ㄷ /d/, ㄹ /l,r/, ㅁ /m/, ㅂ /b/, ㅅ /s,ş/, ㅇ /nğ/, ㅈ /c/, ㅊ /ç/, ㅋ /k/, ㅌ /t/, ㅍ /p/, ㅎ /h/ </p>  <p> &nbsp </p>
+                <p> <b>Kore Alfabesindeki Çift ünsüzler </b></p>
+
+                <p>ㄲ /gg/, ㄸ /dd/, ㅃ /bb/, ㅆ /ss/, ㅉ /cc/</p>
+                
+
+                <p>
+                    ㅂ/b/ +ㅏ/a/ = 바 /ba/ (b harfi ile a birleşti "ba" oldu.) ㄴ /n/ +ㅏ/a/ = 나 /na/ (n harfi ile a birleşti "na" oldu.) "banana" kelimesinin yazılışı: 바나나 (banana)
+
+
+                </p>
+                <div>
+                    <p> &nbsp&nbsp</p>
+                    <p> &nbsp&nbsp</p>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <img src="~/images/indir.png" align="middle" />
+                </div>
+            </div>
+            <div class="col-lg-12 mt-lg-0 mt-5">
+                <!-- contact form grid -->
+               
+                <div class="contact-top1">
+
+                    <div>
+
+
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p> &nbsp&nbsp</p>
+                                <p> &nbsp&nbsp</p>
+                                <p> &nbsp&nbsp</p>
+                                <p> &nbsp&nbsp</p>
+                                <h3>Dersimiz Hakkındaki düşüncelerini Yaz </h3>
+                                <form asp-action="Create" class="contact-wthree-do">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="form-group">
+                                        <label asp-for="UserFullName">Kullanıcı Adı</label>
+                                        <input asp-for="UserFullName" class="form-control" placeholder="Kullanıcı Adı" />
+                                        <span asp-validation-for="UserFullName" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Content">Yorum</label>
+                                        <input asp-for="Content" class="form-control" placeholder="Yorum yaz.." />
+                                        <span asp-validation-for="Content" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label asp-for="CreatedDate">Tarih/Saat</label>
+                                        <input asp-for="CreatedDate" class="form-control" />
+                                        <span asp-validation-for="CreatedDate" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="submit" value="Yorum Yap" class="btn btn-primary" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div>
+                            <a asp-action="Index" class="btn btn-outline-success">Tüm Yorumları Oku</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //contact form grid ends here -->
+            </div>
+        </div>
+        </div>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+
+
+
+

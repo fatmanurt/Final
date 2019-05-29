@@ -1,0 +1,41 @@
+﻿@model IEnumerable<korean.Models.korece>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+
+
+
+
+    <div class="what bg-li py-4" id="what">
+        <div class="container py-xl-4 py-lg-2">
+            <p>
+                <a asp-action="Create" class="btn btn-success" >Yeni kelime kartı oluştur</a>
+            </p>
+            <div class="row about-bottom-w3l text-center mt-4">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-4 about-grid">
+
+                        <div class="about-grid-main">
+
+                            <h4 class="my-4"> @Html.DisplayFor(modelItem => item.kelime)</h4>
+                            <p>  @Html.DisplayFor(modelItem => item.anlam)</p>
+
+
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="button-w3ls btn mt-sm-5 mt-4">Güncelle  |</a> <a asp-action="Delete" asp-route-id="@item.Id" class="button-w3ls btn mt-sm-5 mt-4">Sil</a>
+
+                        </div>
+                        <p>&nbsp;</p>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+
